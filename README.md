@@ -26,4 +26,4 @@
 Задание на 2 доп балла: По нажатию на кнопку с плюсом (справа снизу на Home скрине) анимационно ее поворачивать, 
 превращая в кнопку с крестиком и меняя цвет.
 
-Дизайн (Figma): https://www.figmacrush.com/tasker-todo-app-figma/
+Дизайн (Figma): https://www.figma.com/file/GdzR0Y4gMtV9ERf5GNryJpLQ/Tasker?node-id=54%3A4
