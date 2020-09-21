@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="111" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="AdvancedUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unmarked" translatesAutoresizingMaskIntoConstraints="NO" id="GfD-pX-ibp">
+                        <rect key="frame" x="16" y="41.5" width="28" height="28"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="fh6-YA-zur"/>
+                            <constraint firstAttribute="width" constant="28" id="pGX-Wg-Nwo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Start making a presentation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnf-5y-F5W">
+                        <rect key="frame" x="60" y="18" width="216" height="75"/>
+                        <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="18"/>
+                        <color key="textColor" red="0.14509803921568626" green="0.16470588235294117" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMu-bo-H0W">
+                        <rect key="frame" x="292" y="49.5" width="12" height="12"/>
+                        <color key="backgroundColor" red="0.38039215686274508" green="0.87058823529411766" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="8g8-bU-eGV"/>
+                            <constraint firstAttribute="height" constant="12" id="cpV-wW-gIK"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p43-qP-q1m" userLabel="Separator">
+                        <rect key="frame" x="60" y="110" width="260" height="1"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.16470588235294117" blue="0.19215686274509802" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="HaL-4Y-bw5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="pMu-bo-H0W" secondAttribute="trailing" constant="16" id="EUx-JX-oda"/>
+                    <constraint firstItem="pMu-bo-H0W" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="EYQ-ng-fiN"/>
+                    <constraint firstItem="p43-qP-q1m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="HGf-pm-FCT"/>
+                    <constraint firstItem="tnf-5y-F5W" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JiS-Wi-kgy"/>
+                    <constraint firstItem="tnf-5y-F5W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="MKS-ed-q9i"/>
+                    <constraint firstAttribute="bottom" secondItem="p43-qP-q1m" secondAttribute="bottom" id="Rnf-DV-YDe"/>
+                    <constraint firstItem="tnf-5y-F5W" firstAttribute="leading" secondItem="GfD-pX-ibp" secondAttribute="trailing" constant="16" id="SPD-Vz-weY"/>
+                    <constraint firstItem="pMu-bo-H0W" firstAttribute="leading" secondItem="tnf-5y-F5W" secondAttribute="trailing" constant="16" id="TNz-Sb-Qpc"/>
+                    <constraint firstAttribute="bottom" secondItem="tnf-5y-F5W" secondAttribute="bottom" constant="18" id="asf-XC-ZXF"/>
+                    <constraint firstItem="GfD-pX-ibp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cEq-BW-8j1"/>
+                    <constraint firstItem="GfD-pX-ibp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hH8-9b-xC8"/>
+                    <constraint firstAttribute="trailing" secondItem="p43-qP-q1m" secondAttribute="trailing" id="xr2-bC-aWs"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="listMarkView" destination="pMu-bo-H0W" id="0wQ-i8-Buh"/>
+                <outlet property="markedImageView" destination="GfD-pX-ibp" id="Lh8-yH-7IF"/>
+                <outlet property="separatorView" destination="p43-qP-q1m" id="n0p-kL-X4z"/>
+                <outlet property="titleLabel" destination="tnf-5y-F5W" id="fmu-ao-cdx"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="146.98660714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="unmarked" width="28" height="28"/>
+    </resources>
+</document>
