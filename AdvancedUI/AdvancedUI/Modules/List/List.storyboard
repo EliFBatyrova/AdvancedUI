@@ -45,6 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="Eng-Z6-eWh"/>
                     </view>
                     <connections>
+                        <outlet property="fabView" destination="IP6-9n-n7A" id="BUs-Or-WE1"/>
                         <outlet property="listTableView" destination="2lQ-B1-KOR" id="rwb-vm-5UU"/>
                     </connections>
                 </viewController>

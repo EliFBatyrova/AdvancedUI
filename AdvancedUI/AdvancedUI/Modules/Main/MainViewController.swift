@@ -37,6 +37,8 @@ class MainViewController: UIViewController {
         setupFabAction()
         mainTableView.reloadData()
         popupView.alpha = 0
+        setupFabShadow()
+        setupPopupShadow()
     }
     
     private func registerCells() {
@@ -54,6 +56,26 @@ class MainViewController: UIViewController {
         mainTableView.dataSource = self
         mainTableView.separatorStyle = .none
         registerCells()
+    }
+    
+    private func setupFabShadow() {
+        
+        let shadowPath = UIBezierPath(roundedRect: fabView.bounds, cornerRadius: 0)
+        fabView.layer.shadowPath = shadowPath.cgPath
+        fabView.layer.shadowColor = UIColor(red: 0.084, green: 0.139, blue: 0.218, alpha: 0.16).cgColor
+        fabView.layer.shadowOpacity = 1
+        fabView.layer.shadowRadius = 32
+        fabView.layer.shadowOffset = CGSize(width: 0, height: 24)
+    }
+    
+    private func setupPopupShadow() {
+        
+        let shadowPath = UIBezierPath(roundedRect: popupView.bounds, cornerRadius: 0)
+        popupView.layer.shadowPath = shadowPath.cgPath
+        popupView.layer.shadowColor = UIColor(red: 0.075, green: 0.11, blue: 0.161, alpha: 0.2).cgColor
+        popupView.layer.shadowOpacity = 1
+        popupView.layer.shadowRadius = 30
+        popupView.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
     
     private func setupFabAction() {

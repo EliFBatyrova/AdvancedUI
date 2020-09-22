@@ -11,6 +11,7 @@ import UIKit
 class ListViewController: UIViewController {
     
     @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var fabView: FabView!
     
     var viewModel: ListViewModel!
     
@@ -18,6 +19,7 @@ class ListViewController: UIViewController {
         
         super.viewDidLoad()
         setupTableView()
+        setupFabShadow()
     }
 
     func configure(with viewModel: ListViewModel) {
@@ -52,6 +54,15 @@ class ListViewController: UIViewController {
         listTableView.register(cell: SubtitledLargeTitleTableViewCell.self)
         listTableView.register(cell: TaskTableViewCell.self)
         listTableView.register(cell: TimedTaskTableViewCell.self)
+    }
+    
+    private func setupFabShadow() {
+        let shadowPath = UIBezierPath(roundedRect: fabView.bounds, cornerRadius: 0)
+        fabView.layer.shadowPath = shadowPath.cgPath
+        fabView.layer.shadowColor = UIColor(red: 0.084, green: 0.139, blue: 0.218, alpha: 0.16).cgColor
+        fabView.layer.shadowOpacity = 1
+        fabView.layer.shadowRadius = 32
+        fabView.layer.shadowOffset = CGSize(width: 0, height: 24)
     }
 }
 
