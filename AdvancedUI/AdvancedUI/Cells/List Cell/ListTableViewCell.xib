@@ -25,16 +25,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-BW-AdF">
-                        <rect key="frame" x="58" y="4" width="262" height="74"/>
+                        <rect key="frame" x="58" y="4" width="246" height="74"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Shopping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyp-b5-wss">
-                                <rect key="frame" x="16" y="12" width="89" height="28"/>
+                                <rect key="frame" x="16" y="12" width="82.5" height="28"/>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0e-Kc-g8f">
-                                <rect key="frame" x="16" y="44" width="48" height="17"/>
+                                <rect key="frame" x="16" y="44" width="45" height="17"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                     <constraint firstAttribute="bottom" secondItem="bf3-BW-AdF" secondAttribute="bottom" constant="4" id="763-gA-m29"/>
                     <constraint firstItem="bf3-BW-AdF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="JmB-o2-Wtf"/>
                     <constraint firstItem="bf3-BW-AdF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="58" id="P6w-cj-cmw"/>
-                    <constraint firstAttribute="trailing" secondItem="bf3-BW-AdF" secondAttribute="trailing" id="oZS-Dr-TFh"/>
+                    <constraint firstAttribute="trailing" secondItem="bf3-BW-AdF" secondAttribute="trailing" constant="16" id="oZS-Dr-TFh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
