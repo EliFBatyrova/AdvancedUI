@@ -51,6 +51,7 @@ class DetailsListViewController: UIViewController {
         nameLabel.textColor = getLettersColor
         taskLabel.text = getTask
         taskLabel.textColor = getLettersColor
+        taskLabel.layer.opacity = 0.5
         detailListTableView.backgroundColor = getColor
         
         for item in 0...DataToDo.shared.tasks.count - 1{
