@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="KGk-i7-Jjw" customClass="CategoryTitleTableViewCell" customModule="AdvancedUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miQ-mc-5tk">
+                        <rect key="frame" x="60" y="32" width="136" height="66"/>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
+                        <color key="textColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziv-LE-L6N">
+                        <rect key="frame" x="286" y="55" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="rQV-M1-biY"/>
+                            <constraint firstAttribute="width" constant="20" id="xuy-fk-OIJ"/>
+                        </constraints>
+                        <state key="normal" image="edit"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="# task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncb-wI-23x">
+                        <rect key="frame" x="60" y="101" width="47" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="miQ-mc-5tk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="32" id="2zs-Y0-ACE"/>
+                    <constraint firstItem="Ncb-wI-23x" firstAttribute="top" secondItem="miQ-mc-5tk" secondAttribute="bottom" constant="3" id="4qG-tK-83Z"/>
+                    <constraint firstItem="Ziv-LE-L6N" firstAttribute="centerY" secondItem="miQ-mc-5tk" secondAttribute="centerY" id="9FT-Xr-rr6"/>
+                    <constraint firstItem="Ncb-wI-23x" firstAttribute="leading" secondItem="miQ-mc-5tk" secondAttribute="leading" id="HBW-Eo-gW3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Ncb-wI-23x" secondAttribute="bottom" constant="16" id="IvM-ca-hFL"/>
+                    <constraint firstAttribute="trailing" secondItem="Ziv-LE-L6N" secondAttribute="trailing" constant="14" id="RMF-KY-TgN"/>
+                    <constraint firstItem="miQ-mc-5tk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="gdh-Pf-q5o"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryLabel" destination="miQ-mc-5tk" id="Vcj-NW-COM"/>
+                <outlet property="editButton" destination="Ziv-LE-L6N" id="6wR-Wn-n9B"/>
+                <outlet property="numberOfTasksLabel" destination="Ncb-wI-23x" id="oPU-oC-KYH"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="161.71875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="edit" width="24" height="24"/>
+    </resources>
+</document>

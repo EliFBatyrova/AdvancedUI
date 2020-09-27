@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="TaskWithTimeTableViewCell" customModule="AdvancedUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sh-dS-oix">
+                        <rect key="frame" x="60" y="75" width="260" height="1"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="5ck-VT-Joj"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3v-98-T58">
+                        <rect key="frame" x="292" y="32" width="12" height="12"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="GS1-LS-MBk"/>
+                            <constraint firstAttribute="width" constant="12" id="hUK-Xn-KOL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PgN-Ig-y9b">
+                        <rect key="frame" x="60" y="19" width="107.5" height="38"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1z-NJ-M9n">
+                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                                <color key="textColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="1w7-W4-vkW">
+                                <rect key="frame" x="0.0" y="22" width="107.5" height="16"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ej8-Jt-LV4">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="9yD-Ad-Qlu"/>
+                                            <constraint firstAttribute="height" constant="16" id="CCY-vp-z8A"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5M-Db-xHc">
+                                        <rect key="frame" x="22" y="0.0" width="28" height="16"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-dp-dhn">
+                                        <rect key="frame" x="56" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="OhB-i0-7i1"/>
+                                            <constraint firstAttribute="width" constant="16" id="ziB-WL-d7l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roy-WS-4eJ">
+                                        <rect key="frame" x="78" y="0.0" width="29.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                        <color key="textColor" red="0.1450980392" green="0.1647058824" blue="0.19215686269999999" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unmarked" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-0X-xT2">
+                        <rect key="frame" x="18" y="26" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="uK3-DC-TRS"/>
+                            <constraint firstAttribute="width" constant="24" id="unk-yR-RE4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="1sh-dS-oix" secondAttribute="trailing" id="4IR-hp-917"/>
+                    <constraint firstItem="PgN-Ig-y9b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="8hs-ZJ-Htb"/>
+                    <constraint firstAttribute="bottom" secondItem="1sh-dS-oix" secondAttribute="bottom" id="93t-f9-1LN"/>
+                    <constraint firstAttribute="trailing" secondItem="v3v-98-T58" secondAttribute="trailing" constant="16" id="NEC-mf-xfM"/>
+                    <constraint firstItem="PgN-Ig-y9b" firstAttribute="leading" secondItem="r9G-0X-xT2" secondAttribute="trailing" constant="18" id="NqW-83-1hb"/>
+                    <constraint firstItem="1sh-dS-oix" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="b34-aU-YYl"/>
+                    <constraint firstItem="r9G-0X-xT2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="ej0-ux-PdP"/>
+                    <constraint firstItem="r9G-0X-xT2" firstAttribute="centerY" secondItem="PgN-Ig-y9b" secondAttribute="centerY" id="jXg-hy-xll"/>
+                    <constraint firstItem="1sh-dS-oix" firstAttribute="top" secondItem="PgN-Ig-y9b" secondAttribute="bottom" constant="18" id="m6d-cy-mlE"/>
+                    <constraint firstItem="v3v-98-T58" firstAttribute="centerY" secondItem="PgN-Ig-y9b" secondAttribute="centerY" id="myj-fp-zEZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="calendarImageView" destination="ej8-Jt-LV4" id="gYn-1g-NDf"/>
+                <outlet property="clockImageView" destination="zAq-dp-dhn" id="8nY-Oh-JaV"/>
+                <outlet property="dateLabel" destination="V5M-Db-xHc" id="wAA-Ja-Bu8"/>
+                <outlet property="listMarkerView" destination="v3v-98-T58" id="mwy-MK-MYK"/>
+                <outlet property="taskOvalView" destination="r9G-0X-xT2" id="A24-sp-clq"/>
+                <outlet property="taskTextLabel" destination="o1z-NJ-M9n" id="5DF-cI-TCz"/>
+                <outlet property="timeLabel" destination="roy-WS-4eJ" id="Iq4-EC-PT0"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" width="16" height="16"/>
+        <image name="clock" width="16" height="16"/>
+        <image name="unmarked" width="28" height="28"/>
+    </resources>
+</document>
