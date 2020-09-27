@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="116" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="AdvancedUi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Edi-hF-T76">
+                        <rect key="frame" x="16" y="19" width="288" height="42"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vw-fh-0Yk">
+                                <rect key="frame" x="0.0" y="7" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Rv9-hw-wCu"/>
+                                    <constraint firstAttribute="width" constant="28" id="Vbw-bH-h7N"/>
+                                </constraints>
+                                <state key="normal" image="unmarkedDark"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bua-LG-Pvm">
+                                <rect key="frame" x="37" y="0.0" width="230" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay for rent" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-QO-0ji">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" name="App black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ike-zu-iUr">
+                                        <rect key="frame" x="0.0" y="26" width="168" height="16"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="L8A-2a-pZf">
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="16"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZP-JQ-8oS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="16"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="S2s-DP-xfi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                                <color key="tintColor" name="App black"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="kCV-5J-NTg"/>
+                                                                    <constraint firstAttribute="width" constant="16" id="s2D-4I-hpj"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSv-AR-qZp">
+                                                                <rect key="frame" x="16" y="0.0" width="62.5" height="16"/>
+                                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                                <color key="textColor" name="App black"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x0P-UI-b4g">
+                                                        <rect key="frame" x="84.5" y="0.0" width="83.5" height="16"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alarm" translatesAutoresizingMaskIntoConstraints="NO" id="Gn8-QY-CUQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                                                <color key="tintColor" name="App black"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="16" id="PaV-tS-sin"/>
+                                                                    <constraint firstAttribute="width" constant="16" id="Pqn-jk-dvU"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:00 pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9u-lZ-ezt">
+                                                                <rect key="frame" x="21" y="0.0" width="62.5" height="16"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="62.5" id="fpY-pS-p4X"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="14"/>
+                                                                <color key="textColor" name="App black"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0z-KJ-KjR">
+                                <rect key="frame" x="276" y="15" width="12" height="12"/>
+                                <color key="backgroundColor" name="App red"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="cJZ-Qf-HIa"/>
+                                    <constraint firstAttribute="width" constant="12" id="qxX-Dv-xPp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0p-fq-CK8">
+                        <rect key="frame" x="60" y="79" width="260" height="1"/>
+                        <color key="backgroundColor" name="App black"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Fox-cR-Zb7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Edi-hF-T76" secondAttribute="trailing" constant="16" id="45o-dw-QXD"/>
+                    <constraint firstItem="n0p-fq-CK8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="6vg-WQ-beU"/>
+                    <constraint firstAttribute="bottom" secondItem="n0p-fq-CK8" secondAttribute="bottom" id="D8b-M1-I4q"/>
+                    <constraint firstItem="Edi-hF-T76" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UZn-4S-WIL"/>
+                    <constraint firstAttribute="bottom" secondItem="Edi-hF-T76" secondAttribute="bottom" constant="19" id="ckM-D3-COs"/>
+                    <constraint firstAttribute="trailing" secondItem="n0p-fq-CK8" secondAttribute="trailing" id="oup-jy-nZt"/>
+                    <constraint firstItem="Edi-hF-T76" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="ow6-D9-CBW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkboxButton" destination="4vw-fh-0Yk" id="sbl-ll-1i3"/>
+                <outlet property="mainStackView" destination="Edi-hF-T76" id="Ewx-Fm-AX4"/>
+                <outlet property="separatorLine" destination="n0p-fq-CK8" id="vwV-79-0D3"/>
+                <outlet property="taskDateLabel" destination="GSv-AR-qZp" id="NZr-i0-B7h"/>
+                <outlet property="taskDateStack" destination="dZP-JQ-8oS" id="Dyu-B8-fL4"/>
+                <outlet property="taskDeadlineStack" destination="ike-zu-iUr" id="IgU-AQ-1dj"/>
+                <outlet property="taskNameLabel" destination="GRX-QO-0ji" id="eKx-Pu-pxq"/>
+                <outlet property="taskTimeLabel" destination="r9u-lZ-ezt" id="uvm-fU-gBV"/>
+                <outlet property="taskTimeStack" destination="x0P-UI-b4g" id="IgX-UH-aC9"/>
+                <outlet property="typeIndicatorView" destination="M0z-KJ-KjR" id="lsy-ey-Y4d"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="166.74107142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Alarm" width="24" height="24"/>
+        <image name="Calendar" width="24" height="24"/>
+        <image name="unmarkedDark" width="28" height="28"/>
+        <namedColor name="App black">
+            <color red="0.14499999582767487" green="0.16500000655651093" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="App red">
+            <color red="0.9570000171661377" green="0.36899998784065247" blue="0.42699998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

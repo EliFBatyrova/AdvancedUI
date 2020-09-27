@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupView" customModule="AdvancedUi" customModuleProvider="target">
+            <connections>
+                <outlet property="listImageView" destination="xxe-bn-N0t" id="gdV-9Q-218"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="Yfk-iQ-qs8"/>
+                <outlet property="taskImageView" destination="K4W-aU-Wg1" id="2i0-MF-cak"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaV-V1-0Bo">
+                    <rect key="frame" x="0.0" y="0.0" width="220" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Task" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4W-aU-Wg1">
+                            <rect key="frame" x="18" y="18" width="24" height="24"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="jW6-aF-7gu"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMV-kF-cWF">
+                            <rect key="frame" x="54" y="19" width="36.5" height="22"/>
+                            <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.42352941176470588" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="K4W-aU-Wg1" firstAttribute="top" secondItem="LaV-V1-0Bo" secondAttribute="top" constant="18" id="1tI-EF-NxO"/>
+                        <constraint firstItem="TMV-kF-cWF" firstAttribute="leading" secondItem="K4W-aU-Wg1" secondAttribute="trailing" constant="12" id="3aJ-y0-iIc"/>
+                        <constraint firstItem="K4W-aU-Wg1" firstAttribute="leading" secondItem="LaV-V1-0Bo" secondAttribute="leading" constant="18" id="71q-Eb-5oD"/>
+                        <constraint firstAttribute="height" constant="60" id="EKu-FV-NHC"/>
+                        <constraint firstAttribute="bottom" secondItem="TMV-kF-cWF" secondAttribute="bottom" constant="19" id="Fs8-WV-isg"/>
+                        <constraint firstItem="TMV-kF-cWF" firstAttribute="top" secondItem="LaV-V1-0Bo" secondAttribute="top" constant="19" id="G5W-qI-ckO"/>
+                        <constraint firstAttribute="bottom" secondItem="K4W-aU-Wg1" secondAttribute="bottom" constant="18" id="YjF-oR-gvk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-Rd-fc5">
+                    <rect key="frame" x="0.0" y="60" width="220" height="60"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lists" translatesAutoresizingMaskIntoConstraints="NO" id="xxe-bn-N0t">
+                            <rect key="frame" x="18" y="18" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="FF6-nC-4T5"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weR-W4-gxV">
+                            <rect key="frame" x="54" y="19" width="29" height="22"/>
+                            <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.42352941179999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jv4-nx-j5q">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="1"/>
+                            <color key="backgroundColor" name="App gray"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="5oY-WY-rLt"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xxe-bn-N0t" firstAttribute="leading" secondItem="wbc-Rd-fc5" secondAttribute="leading" constant="18" id="1tJ-M1-jZq"/>
+                        <constraint firstItem="weR-W4-gxV" firstAttribute="leading" secondItem="xxe-bn-N0t" secondAttribute="trailing" constant="12" id="4d4-X3-Wim"/>
+                        <constraint firstItem="Jv4-nx-j5q" firstAttribute="top" secondItem="wbc-Rd-fc5" secondAttribute="top" id="AT9-YT-SOq"/>
+                        <constraint firstAttribute="bottom" secondItem="xxe-bn-N0t" secondAttribute="bottom" constant="18" id="IGt-05-UM4"/>
+                        <constraint firstItem="weR-W4-gxV" firstAttribute="top" secondItem="wbc-Rd-fc5" secondAttribute="top" constant="19" id="KZl-Ym-bov"/>
+                        <constraint firstItem="xxe-bn-N0t" firstAttribute="top" secondItem="wbc-Rd-fc5" secondAttribute="top" constant="18" id="W0T-C1-Osy"/>
+                        <constraint firstAttribute="trailing" secondItem="Jv4-nx-j5q" secondAttribute="trailing" id="XxT-fl-3Da"/>
+                        <constraint firstAttribute="bottom" secondItem="weR-W4-gxV" secondAttribute="bottom" constant="19" id="iK3-3w-2H6"/>
+                        <constraint firstItem="Jv4-nx-j5q" firstAttribute="leading" secondItem="wbc-Rd-fc5" secondAttribute="leading" id="poc-ZC-1mn"/>
+                        <constraint firstAttribute="height" constant="60" id="uhS-fm-Sub"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="LaV-V1-0Bo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5sm-Zi-R7s"/>
+                <constraint firstItem="wbc-Rd-fc5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7lz-Uv-dfJ"/>
+                <constraint firstItem="wbc-Rd-fc5" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Jhd-nP-dm0"/>
+                <constraint firstItem="LaV-V1-0Bo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Nm3-bE-3R8"/>
+                <constraint firstItem="wbc-Rd-fc5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Uce-Jk-Tjw"/>
+                <constraint firstItem="LaV-V1-0Bo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Z5K-pf-TZJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="32"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="137.68115942028987" y="445.98214285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Lists" width="24" height="24"/>
+        <image name="Task" width="24" height="24"/>
+        <namedColor name="App gray">
+            <color red="0.92199999094009399" green="0.93699997663497925" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
