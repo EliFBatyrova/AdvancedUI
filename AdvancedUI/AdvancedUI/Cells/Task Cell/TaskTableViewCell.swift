@@ -15,7 +15,11 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var listMarkView: UIView!
     @IBOutlet weak var separatorView: UIView!
     
+    var viewModel: TaskViewModel!
+    
     func configure(with viewModel: TaskViewModel) {
+        
+        self.viewModel = viewModel
         
         let unmarkedImageName = viewModel.hasLightAppearance ? "unmarked_light" : "unmarked"
         markedImageView.image = UIImage(named: viewModel.isMarked ? "marked" : unmarkedImageName)
@@ -51,3 +55,13 @@ class TaskTableViewCell: UITableViewCell {
         }
     }
 }
+
+extension TaskTableViewCell: SelectableCell {
+    
+    func toggleMark() {
+        
+        viewModel.isMarked.toggle()
+        configure(with: viewModel)
+    }
+}
+

@@ -157,6 +157,9 @@ extension MainViewController: UITableViewDelegate {
             let viewModel = ListViewModel(header: list, tasks: tasks)
             performSegue(withIdentifier: "presentList", sender: viewModel)
         }
+        else if let cell = tableView.cellForRow(at: indexPath) as? SelectableCell {
+            cell.toggleMark()
+        }
     }
 }
 

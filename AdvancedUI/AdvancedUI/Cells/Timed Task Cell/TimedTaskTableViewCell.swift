@@ -21,7 +21,11 @@ class TimedTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var secondSubLabelContainer: UIView!
     @IBOutlet weak var separatorView: UIView!
     
+    var viewModel: TaskViewModel!
+    
     func configure(with viewModel: TaskViewModel) {
+        
+        self.viewModel = viewModel
         
         let unmarkedImageName = viewModel.hasLightAppearance ? "unmarked_light" : "unmarked"
         markedImageView.image = UIImage(named: viewModel.isMarked ? "marked" : unmarkedImageName)
@@ -84,5 +88,14 @@ class TimedTaskTableViewCell: UITableViewCell {
         }
         
         secondSubLabelImageView.alpha = viewModel.isMarked ? 0.5 : 1
+    }
+}
+
+extension TimedTaskTableViewCell: SelectableCell {
+    
+    func toggleMark() {
+        
+        viewModel.isMarked.toggle()
+        configure(with: viewModel)
     }
 }

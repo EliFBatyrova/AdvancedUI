@@ -36,6 +36,7 @@
 		737F72C825188C7F00FB21E8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F72C725188C7F00FB21E8 /* ListViewController.swift */; };
 		73E14EDC2519218F00ED794D /* Fab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E14EDB2519218F00ED794D /* Fab.xib */; };
 		73E14EDE2519229100ED794D /* FabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E14EDD2519229100ED794D /* FabView.swift */; };
+		73F1F44F25285A7800B9C40A /* SelectableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F1F44E25285A7800B9C40A /* SelectableCell.swift */; };
 		73FAC81025178BA500F43674 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73FAC80F25178B9500F43674 /* SF-Pro-Display-Bold.otf */; };
 		73FAC81525178DE000F43674 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FAC81325178DE000F43674 /* TaskTableViewCell.swift */; };
 		73FAC81625178DE000F43674 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73FAC81425178DE000F43674 /* TaskTableViewCell.xib */; };
@@ -76,6 +77,7 @@
 		737F72C725188C7F00FB21E8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		73E14EDB2519218F00ED794D /* Fab.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Fab.xib; sourceTree = "<group>"; };
 		73E14EDD2519229100ED794D /* FabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FabView.swift; sourceTree = "<group>"; };
+		73F1F44E25285A7800B9C40A /* SelectableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCell.swift; sourceTree = "<group>"; };
 		73FAC80F25178B9500F43674 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		73FAC81325178DE000F43674 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		73FAC81425178DE000F43674 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				734CEFBF25179B6D000FBBD4 /* Lists Header Cell */,
 				73FAC8172517916E00F43674 /* Timed Task Cell */,
 				73FAC81225178DC300F43674 /* Task Cell */,
+				73F1F44E25285A7800B9C40A /* SelectableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				737F72B725187E5600FB21E8 /* ListType.swift in Sources */,
 				73645AFD2517AD9300BCED0C /* UIColor+FromHex.swift in Sources */,
 				73645B022517B6E300BCED0C /* LargeTitleTableViewCell.swift in Sources */,
+				73F1F44F25285A7800B9C40A /* SelectableCell.swift in Sources */,
 				7323248E2517844000EE1766 /* MainViewController.swift in Sources */,
 				734CEFCF2517A2E2000FBBD4 /* ListCellViewModel.swift in Sources */,
 				734CEFCD2517A1E9000FBBD4 /* TaskViewModel.swift in Sources */,
