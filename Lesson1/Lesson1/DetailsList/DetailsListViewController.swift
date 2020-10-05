@@ -14,13 +14,13 @@ class DetailsListViewController: UIViewController {
     @IBOutlet weak var createNewTask: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
-    @IBOutlet var viewBackground: UIView!
+    @IBOutlet weak var viewBackground: UIView!
     @IBOutlet weak var pencil: UIButton!
     
-    var getColor = UIColor()
-    var getName = String()
-    var getTask = String()
-    var getLettersColor = UIColor()
+    var listColor = UIColor()
+    var listName = String()
+    var listTask = String()
+    var listLettersColor = UIColor()
     
     var arrayTasks: [ToDoTask] = []
            
@@ -40,22 +40,22 @@ class DetailsListViewController: UIViewController {
         createNewTask.layer.shadowOffset = CGSize(width: 0, height: 10)
         createNewTask.setImage(#imageLiteral(resourceName: "Combined Shape"), for: .normal)
         
-        if getLettersColor == UIColor.rgb(red: 255, green: 255, blue: 255) {
+        if listLettersColor == UIColor.rgb(red: 255, green: 255, blue: 255) {
             pencil.setImage(#imageLiteral(resourceName: "whitePensel"), for: .normal)
         } else {
             pencil.setImage(#imageLiteral(resourceName: "darkPensel"), for: .normal)
         }
         
-        viewBackground.backgroundColor = getColor
-        nameLabel.text = getName
-        nameLabel.textColor = getLettersColor
-        taskLabel.text = getTask
-        taskLabel.textColor = getLettersColor
+        viewBackground.backgroundColor = listColor
+        nameLabel.text = listName
+        nameLabel.textColor = listLettersColor
+        taskLabel.text = listTask
+        taskLabel.textColor = listLettersColor
         taskLabel.layer.opacity = 0.5
-        detailListTableView.backgroundColor = getColor
+        detailListTableView.backgroundColor = listColor
         
         for item in 0...DataToDo.shared.tasks.count - 1{
-            if DataToDo.shared.tasks[item].markColor == getColor {
+            if DataToDo.shared.tasks[item].markColor == listColor {
                 arrayTasks.append(DataToDo.shared.tasks[item])
             }
         }
@@ -66,12 +66,6 @@ class DetailsListViewController: UIViewController {
 
 extension DetailsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        var countOfLine = 0
-//        for item in 0...DataToDo.shared.tasks.count - 1{
-//            if DataToDo.shared.tasks[item].markColor == getColor {
-//                countOfLine = countOfLine + 1
-//            }
-//        }
         
         return arrayTasks.count
     }
@@ -80,11 +74,11 @@ extension DetailsListViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
         
         
-        cell.backgroundColor = getColor
-        cell.taskLabel.textColor = getLettersColor
+        cell.backgroundColor = listColor
+        cell.taskLabel.textColor = listLettersColor
         cell.checkBoxImageView.image = #imageLiteral(resourceName: "Unmarked")
         
-        if getLettersColor == UIColor.rgb(red: 255, green: 255, blue: 255) {
+        if listLettersColor == UIColor.rgb(red: 255, green: 255, blue: 255) {
             cell.checkBoxImageView.image = #imageLiteral(resourceName: "UnmarkedWhite")
         } else {
             cell.checkBoxImageView.image = #imageLiteral(resourceName: "Unmarked")

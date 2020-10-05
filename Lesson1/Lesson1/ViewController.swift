@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var createTaskButton: UIButton!
     @IBOutlet weak var createListButton: UIButton!
     
+    var plusImages: [UIImage] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
         createNewTask.layer.shadowOpacity = 0.25
         createNewTask.layer.shadowRadius = 5
         createNewTask.layer.shadowOffset = CGSize(width: 0, height: 10)
-        createNewTask.setImage(#imageLiteral(resourceName: "Combined Shape"), for: .normal)
+        createNewTask.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         
         
         opacitiView.isHidden = true
@@ -49,8 +51,28 @@ class ViewController: UIViewController {
         createListOrTaskView.layer.shadowRadius = 5
         createListOrTaskView.layer.shadowOffset = CGSize(width: 0, height: 10)
         
+        plusImages = createImageArray(total: 5, imagePrefix: "Plus")
         
+    }
+    
+    func createImageArray(total: Int, imagePrefix: String) -> [UIImage] {
         
+        var imageArray: [UIImage] = []
+        
+        for imageCount in 0..<total {
+            let imageName = "\(imagePrefix)\(imageCount).png"
+            let image = UIImage(named: imageName)!
+            
+            imageArray.append(image)
+        }
+        return imageArray
+    }
+    
+    func animate(imageView: UIImageView, images: [UIImage]) {
+        imageView.animationImages = images
+        imageView.animationDuration = 0.5
+        imageView.animationRepeatCount = 1
+        imageView.startAnimating()
     }
     
     @IBAction func createNewTaskActionButton(_ sender: Any) {
@@ -58,17 +80,17 @@ class ViewController: UIViewController {
         createListOrTaskView.isHidden = !createListOrTaskView.isHidden
         
         if opacitiView.isHidden == true {
-//            createNewTask.backgroundColor = UIColor.white
             UIView.animate(withDuration: 0.5) {
                 self.createNewTask.backgroundColor = UIColor.white
             }
-            createNewTask.setImage(#imageLiteral(resourceName: "Combined Shape"), for: .normal)
+            animate(imageView: createNewTask.imageView!, images: plusImages.reversed())
+            createNewTask.setImage(#imageLiteral(resourceName: "Plus0.png"), for: .normal)
         } else {
-//            createNewTask.backgroundColor = UIColor.rgb(red: 10, green: 132, blue: 255)
             UIView.animate(withDuration: 0.5) {
                 self.createNewTask.backgroundColor = UIColor.rgb(red: 10, green: 132, blue: 255)
             }
-            createNewTask.setImage(#imageLiteral(resourceName: "cross.png"), for: .normal)
+            animate(imageView: createNewTask.imageView!, images: plusImages)
+            createNewTask.setImage(#imageLiteral(resourceName: "Plus4.png"), for: .normal)
         }
     }
     
@@ -87,8 +109,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row < 5 {
+        if indexPath.row < 3 || indexPath.row > 3 && indexPath.row < 5 {
             return 60
+        } else if indexPath.row == 3 {
+            return 81
         } else if indexPath.row == 5 {
             return 59
         }
@@ -166,10 +190,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.cellForRow(at: indexPath) as? ListTableViewCell else {return}
         
             
-            DvC.getColor = cell.tasksView.backgroundColor!
-            DvC.getName = cell.listNameLabel.text!
-            DvC.getTask = cell.countTasksLabel.text!
-            DvC.getLettersColor = cell.listNameLabel.textColor
+            DvC.listColor = cell.tasksView.backgroundColor!
+            DvC.listName = cell.listNameLabel.text!
+            DvC.listTask = cell.countTasksLabel.text!
+            DvC.listLettersColor = cell.listNameLabel.textColor
             
             self.present(DvC, animated: true)
             
